@@ -18,6 +18,7 @@ let nameLabel : UILabel = {
     label.numberOfLines = 0
     label.textAlignment = .left
     label.translatesAutoresizingMaskIntoConstraints = false
+    
     return label
 }()
 
@@ -25,6 +26,7 @@ let shapeView : UIImageView = {
     let imageView = UIImageView()
     imageView.image = UIImage(named: "elipse")
     imageView.translatesAutoresizingMaskIntoConstraints = false
+    
     return imageView
 }()
 
@@ -79,6 +81,7 @@ override func viewDidLoad() {
     startButton.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
     relaxButton.addTarget(self, action: #selector(addTappedRelax), for: .touchUpInside)
 }
+    
 @objc func setTimerLabel() {
    let countMinutes = Int(Double(durationTimer) / 60)
    let countSecond = durationTimer - (countMinutes * 60)
@@ -109,7 +112,6 @@ func timerAction() {
 @objc
 func addTapped() {
     durationTimer = 1500
-    
     timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
@@ -195,6 +197,5 @@ extension ViewController {
             relaxButton.heightAnchor.constraint(equalToConstant: 70),
             relaxButton.widthAnchor.constraint(equalToConstant: 300)
         ])
-        
     }
 }
