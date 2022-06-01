@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     var startButton: UIButton = {
         let button = UIButton()
-        button.setTitle("WORK", for: .normal)
+        button.setTitle("WORK!", for: .normal)
         button.backgroundColor = .systemPink
         button.layer.cornerRadius = 25
         button.tintColor = .systemPink
